@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{bd24d9c3-a3ff-4c29-8dce-fd645270877f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{6b62e300-cff7-473b-81b7-b9828e035938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\support">
+      <UniqueIdentifier>{6d9b8513-b86e-4859-aebd-b917efc412cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{6564cc1a-1902-4833-bf99-8a3fd8b5f6fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spirv">
+      <UniqueIdentifier>{297e8db1-3c91-43b3-9cfc-72c960bcdd72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{d7e91b2e-f7d6-459d-8d14-52cd4b0e3ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\bin">
+      <UniqueIdentifier>{6b4b52e1-7039-41bd-90cf-c0cb0eba628c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\bin\Vulkan-ValidationLayers">
+      <UniqueIdentifier>{158180ac-037d-4527-89f4-0d1d5453e20b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\bin\Vulkan-ValidationLayers\x64">
+      <UniqueIdentifier>{621e01d2-696b-4f29-81b9-b62387acb2d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\bin\Vulkan-ValidationLayers\x86">
+      <UniqueIdentifier>{32ae49dd-46f7-4f01-a217-ee1fec1cab5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\assets\cube.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\camera_controller.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\main.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\renderer.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\utils_align_up.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\demo.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\assets\lunarg_dds.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\load_asset_input_stream.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\load_image_asset.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\load_dds_image_asset.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\assets\cube.h">
+      <Filter>assets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\camera_controller.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\frame_throttling.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\renderer.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\utils_align_up.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\demo.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\assets\lunarg_dds.h">
+      <Filter>assets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\load_image_asset.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\load_asset_input_stream.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\shaders\forward_shading_fragment.sl">
+      <Filter>shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\shaders\forward_shading_vertex.sl">
+      <Filter>shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\shaders\point_light_shadow_vertex.sl">
+      <Filter>shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\shaders\point_light_shadow_fragment.sl">
+      <Filter>shaders</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\spirv\forward_shading_fragment.inl">
+      <Filter>spirv</Filter>
+    </None>
+    <None Include="..\spirv\forward_shading_vertex.inl">
+      <Filter>spirv</Filter>
+    </None>
+    <None Include="..\shaders\forward_shading_pipeline_layout.sli">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\point_light_shadow_pipeline_layout.sli">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\spirv\point_light_shadow_fragment.inl">
+      <Filter>spirv</Filter>
+    </None>
+    <None Include="..\spirv\point_light_shadow_vertex.inl">
+      <Filter>spirv</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\thirdparty\Vulkan-ValidationLayers\bin\win32\x64\VkLayer_khronos_validation.json">
+      <Filter>thirdparty\bin\Vulkan-ValidationLayers\x64</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\thirdparty\Vulkan-ValidationLayers\bin\win32\x64\VkLayer_khronos_validation.dll">
+      <Filter>thirdparty\bin\Vulkan-ValidationLayers\x64</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\thirdparty\Vulkan-ValidationLayers\bin\win32\x86\VkLayer_khronos_validation.json">
+      <Filter>thirdparty\bin\Vulkan-ValidationLayers\x86</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\thirdparty\Vulkan-ValidationLayers\bin\win32\x86\VkLayer_khronos_validation.dll">
+      <Filter>thirdparty\bin\Vulkan-ValidationLayers\x86</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+</Project>

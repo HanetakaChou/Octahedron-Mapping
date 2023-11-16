@@ -1,0 +1,54 @@
+//
+// Copyright (C) YuqiaoZhang(HanetakaChou)
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+
+#ifndef _FORWARD_SHADING_PIPELINE_LAYOUT_SLI_
+#define _FORWARD_SHADING_PIPELINE_LAYOUT_SLI_ 1
+
+#include "../thirdparty/PAL/include/pal_define.sli"
+
+pal_cbuffer(forward_shading_layout_global_set_frame_uniform_buffer_binding, 0, 0)
+{
+    pal_column_major pal_float4x4 g_view_transform;
+    pal_column_major pal_float4x4 g_projection_transform;
+    pal_float4 g_point_light_position_and_radius;
+    pal_float g_point_light_shadow_bias;
+    pal_float unused_name_padding_point_light_shadow_bias_1;
+    pal_float unused_name_padding_point_light_shadow_bias_2;
+    pal_float unused_name_padding_point_light_shadow_bias_3;
+};
+
+pal_sampler_state(g_samplers, 0, 2, 2);
+
+pal_cbuffer(forward_shading_layout_global_set_object_uniform_buffer_binding, 0, 1)
+{
+    pal_column_major pal_float4x4 g_model_transform;
+};
+
+pal_texture_2D(g_point_light_shadow_texture, 0, 3, 1);
+
+pal_texture_2D(g_material_textures, 1, 0, 1);
+
+#define forward_shading_root_signature_macro                                                            \
+    pal_root_signature_root_parameter_begin(forward_shading_root_signature_name)                        \
+    pal_root_signature_root_cbv(0, 0) pal_root_signature_root_parameter_split                           \
+    pal_root_signature_root_cbv(0, 1) pal_root_signature_root_parameter_split                           \
+    pal_root_signature_root_descriptor_table_sampler(0, 2, 2) pal_root_signature_root_parameter_split   \
+    pal_root_signature_root_descriptor_table_srv(0, 3, 1) pal_root_signature_root_parameter_split       \
+    pal_root_signature_root_descriptor_table_srv(1, 0, 1)                                               \
+    pal_root_signature_root_parameter_end
+
+#endif

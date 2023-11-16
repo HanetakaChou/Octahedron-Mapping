@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{bd24d9c3-a3ff-4c29-8dce-fd645270877f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{6b62e300-cff7-473b-81b7-b9828e035938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\support">
+      <UniqueIdentifier>{6d9b8513-b86e-4859-aebd-b917efc412cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{6564cc1a-1902-4833-bf99-8a3fd8b5f6fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dxbc">
+      <UniqueIdentifier>{0fdd0fa4-cdf6-47e5-9605-a438eac8a7bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\assets\cube.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\camera_controller.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\main.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\renderer.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\utils_align_up.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\demo.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\assets\lunarg_dds.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\load_asset_input_stream.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\load_image_asset.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\support\load_dds_image_asset.cpp">
+      <Filter>code\support</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\assets\cube.h">
+      <Filter>assets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\camera_controller.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\frame_throttling.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\renderer.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\utils_align_up.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\demo.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\assets\lunarg_dds.h">
+      <Filter>assets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\load_image_asset.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\support\load_asset_input_stream.h">
+      <Filter>code\support</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\forward_shading_pipeline_layout.sli">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\dxbc\forward_shading_fragment.inl">
+      <Filter>dxbc</Filter>
+    </None>
+    <None Include="..\dxbc\forward_shading_vertex.inl">
+      <Filter>dxbc</Filter>
+    </None>
+    <None Include="..\shaders\point_light_shadow_pipeline_layout.sli">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\dxbc\point_light_shadow_fragment.inl">
+      <Filter>dxbc</Filter>
+    </None>
+    <None Include="..\dxbc\point_light_shadow_vertex.inl">
+      <Filter>dxbc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\shaders\forward_shading_vertex.sl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\forward_shading_fragment.sl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\point_light_shadow_vertex.sl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\point_light_shadow_fragment.sl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
